@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Botao from './components/botao.js';
 
 function App() {
+  const mano = <h2>Aprendendo o corre, mano</h2>
+
+  function teste() {
+    return(
+      <div>
+      <p>aaaaaaaaaaaaaaaaaa</p>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="classeTeste">Iniciando React</h1>
+      <p>Testando a const: {mano}</p>
+      {teste()}
+
+      <Botao/>
     </div>
   );
 }
