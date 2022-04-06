@@ -36,13 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.classeTeste {
-  color: yellowgreen;
-}
-
-.botao {
-  color: purple;
-  background-color: lightcyan;
-  border-color: yellowgreen;
-}
