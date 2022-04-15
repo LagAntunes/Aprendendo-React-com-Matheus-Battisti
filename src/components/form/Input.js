@@ -2,10 +2,10 @@ import styles from "./Input.module.css"
 
 function Input({type, text, name, placeholder, handleOnchange, value}){
     return(
-        <div clasName={styles.form_control}>
+        <div className={styles.formControl}>
             <label htmlFor={name}>
                 {text}
-            </label>
+            </label><br/>
             <input 
                 type={type} 
                 name={name} 
