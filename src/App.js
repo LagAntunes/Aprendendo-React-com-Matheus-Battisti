@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Home from "./components/pages/Home";
 import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
@@ -17,17 +17,27 @@ function App() {
       <Navbar/>
 
       <Container customClass = "min-height">
-        <Routes>
-            <Route path="/" element={<Home />}></Route>
+        <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-            <Route path="/newProject" element={<NewProject />}></Route>
+            <Route exact path="/newProject">
+              <NewProject />
+            </Route>
 
-            <Route path="/projects" element={<Projects />}></Route>
+            <Route exact path="/projects">
+              <Projects />
+            </Route>
 
-            <Route path="/contact" element={<Contact />}></Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
 
-            <Route path="/company" element={<Company />}></Route>
-        </Routes>
+            <Route exact path="/company">
+              <Company />
+            </Route>
+        </Switch>
       </Container>
 
       <Footer/>
