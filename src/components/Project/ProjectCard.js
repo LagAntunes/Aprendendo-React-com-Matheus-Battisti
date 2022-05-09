@@ -5,6 +5,11 @@ import {Link} from "react-router-dom"
 import styles from "./ProjectCard.module.css"
 
 function ProjectCard({id, name, budget, category, handleRemove}){
+    const remove = (e) => {
+        e.preventDefault()
+        handleRemove(id)
+    }
+
     return(
         <div className={styles.projectCard}>
             <h4>{name}</h4>
@@ -14,7 +19,7 @@ function ProjectCard({id, name, budget, category, handleRemove}){
                 <Link to="/">
                     <BsPencil/> &nbsp;Editar
                 </Link>
-                <button>
+                <button onClick={remove}>
                     <BsFillTrashFill/> &nbsp;Excluír
                 </button>
             </div>
